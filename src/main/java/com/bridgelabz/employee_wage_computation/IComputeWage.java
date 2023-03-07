@@ -4,5 +4,5 @@ public interface IComputeWage {
     void addCompanyEmpWage(String company, int ratePerHour, int noOfWorkingDays, int maxWorkingHours);
 
     void getMonthlyWage();
-
+    int getTotalWage(String company);
 }
