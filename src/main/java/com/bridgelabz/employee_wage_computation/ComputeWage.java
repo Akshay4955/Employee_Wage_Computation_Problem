@@ -30,7 +30,7 @@ public class ComputeWage implements IComputeWage {
 
 
     public int getMonthlyWage(CompanyWage companyWage) {
-        int totalEmpHours = 0, totalWorkingDays = 0;
+        int totalEmpHours = 0, totalWorkingDays = 0, day =0;
         while (totalEmpHours < companyWage.MAX_WORKING_HOURS && totalWorkingDays < companyWage.NO_OF_WORKING_DAYS) {
             totalWorkingDays++;
             int empHours;
@@ -46,8 +46,16 @@ public class ComputeWage implements IComputeWage {
                     empHours = 0;
                     break;
             }
+            int dailyWage = empHours * companyWage.RATE_PER_HOUR;
+            companyWage.dailyWage[day] = dailyWage;
+            day++;
             totalEmpHours += empHours;
         }
+        System.out.println("Daily wage is: " );
+        for (int x = 0; x < totalWorkingDays; x++) {
+            System.out.print(companyWage.dailyWage[x] + " ");
+        }
+        System.out.println();
         return totalEmpHours * companyWage.RATE_PER_HOUR;
     }
 }

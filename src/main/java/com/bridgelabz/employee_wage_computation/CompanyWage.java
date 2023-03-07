@@ -6,6 +6,7 @@ public class CompanyWage {
     public final int NO_OF_WORKING_DAYS;
     public final int MAX_WORKING_HOURS;
     public int totalEmpWage;
+    public int[] dailyWage = new int[31];
 
     public CompanyWage(String company, int ratePerHour, int noOfWorkingDays, int maxWorkingHours) {
         this.COMPANY = company;
