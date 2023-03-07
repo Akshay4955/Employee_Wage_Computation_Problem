@@ -14,10 +14,10 @@ public class CompanyWage {
         this.MAX_WORKING_HOURS = maxWorkingHours;
     }
 
-     public void setTotalEmpWage (int totalEmpWage) {
+    public void setTotalEmpWage(int totalEmpWage) {
 
         this.totalEmpWage = totalEmpWage;
-     }
+    }
 
     @Override
     public String toString() {
